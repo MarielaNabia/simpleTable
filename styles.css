@@ -1,0 +1,64 @@
+body{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    justify-content: center;
+   
+}
+
+h1{
+    text-align: center;
+    background-color: rgb(63, 184, 128);
+    color: aliceblue;
+    width: 100%;
+}
+
+form{
+   /*  border: 0.2rem solid rgb(63, 63, 184); */
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    
+}
+
+#tasks{
+    /* border: 0.2rem solid rgb(63, 63, 184); */
+    width: 45%;
+    min-height: 80vh; 
+    margin: 1rem;
+}
+
+.titleTas{
+    width: 70%;
+    margin: 1rem;
+    height: 40%;
+    text-align: center;
+}
+input{
+    width: 100%;
+    padding-left: 0.2rem;
+    height: 20%;
+    background-color: orange;
+}
+#description{
+    width: 100%;
+    padding-left: 0.2rem;
+    height: 100%;
+    background-color: orange;
+}
+#conteinerTask{
+border: 0.1rem solid blue;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+flex-direction: column;
+width: 50%;
+align-items: center;
+margin: 1rem;
+background-color: orange;
+}
+
+
+
