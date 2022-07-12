@@ -1,8 +1,6 @@
 document.getElementById("formTask").addEventListener("submit", displayTasks);
 
 function displayTasks(e){
-    e.preventDefault()
-   
     let title = document.getElementById("title").value;
     let description=document.getElementById("description").value; 
 
@@ -20,7 +18,7 @@ function displayTasks(e){
         tasks.push(task);
         localStorage.setItem("tasks", JSON.stringify(tasks))
     }
-
+    e.preventDefault()
     getAllTask()
 }
 
@@ -46,14 +44,18 @@ tasks.map(tas =>{
 }
 
 function deleteTask(titleTask){  
-let tasks = JSON.parse(localStorage.getItem("tasks"));
-console.log(tasks)
- tasks.map(tas=> {
+    let newTask=[]
     console.log(titleTask)
-    if(tas.title == titleTask){
-      tasks.splice(tas, 1);  }
+let tasksLocal = JSON.parse(localStorage.getItem("tasks"));
+console.log(tasksLocal)
+ tasksLocal.map(tas=> {
+    
+    if(tas.title === titleTask){
+      newTask.push(...tasksLocal.filter(item => item.title !== titleTask ))  }
+      console.log(newTask)
     })
-    localStorage.setItem("tasks", JSON.stringify(tasks))
+    
+    localStorage.setItem("tasks", JSON.stringify(newTask))
     getAllTask()
 }
 
